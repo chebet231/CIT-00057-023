@@ -1,0 +1,122 @@
+<html lang=en>
+    <head>
+        <title>
+            centered rectanglewith CIS 221
+        </title>
+        <style>
+            .centered-rectangle{
+                width: 50 px;
+                height:  40px;
+                background-color: blueviolet;
+                display: flex;
+                border: 3px solid black;
+                align-items: center;
+                justify-content: center;
+               
+            }
+            h2{
+                text-align: center;
+                text-decoration: underline;
+                color: blueviolet;
+            }
+           button{
+             border-radius: 25px;
+                padding: 15px 10px;
+                line-height: 20px;
+                background-color: thistle;
+                box-shadow:black 5px;
+                font-weight: bolder;
+                font-size: 18px;
+                text-transform: uppercase;
+                display: block;
+                margin: 0 auto;
+                
+                
+           }
+           h3{
+            text-align: center;
+            text-decoration: underline;
+           }
+           h4{
+            text-align: center;
+            font-weight: normal;
+            
+           }
+           p{
+            text-align: center;
+           }
+           a{
+               text-decoration: none;
+                align-self: center;
+                display:inline-block;
+                margin-inline: 10px;
+                text-transform: capitalize;
+
+           }
+           body{
+            text-align: center;
+            background-color: rgb(236, 203, 141);
+           }
+
+
+        </style>
+        <body>
+            <hr></hr>
+
+            
+            
+                
+            <div class="centered-rectangle">
+                CIS 221
+            </div>
+            <h2>
+                Home Of Imports
+            </h2>
+            <hr></hr>
+            <img src="https://www.shutterstock.com/image-photo/traffic-light-land-transportation-passenger-260nw-233630080.jpg" alt="plane"/>
+            <br>
+                <p>
+                    <br>
+                    <b> City solutions </b> delights in reliving you of the effort put into imports logistucs. We are here
+                </br>
+                <br>
+                  to redefein this process for you in simpler way. Our simpler way is by allowing you to relax as we do the
+               </br>
+               <br>
+               the sourcing for you , do purchases and handle all paper work required by customs
+               </br>
+               <br>
+                in both country of origin and destination. To add onto this, we deliver it right at your door step
+              </br>
+                </p>
+
+                </br>
+            
+            <h3><br>
+                countries covered:</h3>
+                 </br>
+                 <br>
+                <div class="anchors" span="10px">
+                    <a href="https://www.alibaba.com/"
+                    target="_blank">
+                    CHINA</a>
+                    <a href="https://www.amazon.co.uk"
+                    target="_blank">
+                    United Kingdom</a>
+                    <a href="https://www.amazon.com/"
+                    target="_blank">
+                    United states of america </a>
+                </div>
+            </br>
+            
+         <button>
+            🍜place an order?
+         </button>
+         
+         
+         <h4>
+            Designed and coded by <b>  Chebet Janet  </b>
+         </h4>
+         
+        </body>
+    </head>
