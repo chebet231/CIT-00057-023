@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>
+            Weather App
+        </title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                background-color: whitesmoke;
+            }
+            .container{
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                width: max-content;
+            }
+            .search-bar{
+                display: flex;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .search-bar input{
+                padding: 20px;
+                border: 1px solid whitesmoke ;
+                border-radius: 6px;
+                outline: none;
+                width: 75%; 
+            }
+            .search-bar button{
+                padding: 20px;
+                border: none;
+                background-color:rgba(111, 46, 172, 0.575);
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                text-align: center;
+                margin-left: 5px;
+                line-height: 1;
+            }
+            .weather-info h1{
+                margin: 0;
+                font-size: 2em;
+                
+            }
+            .weather-info .temperature{
+                font-size: 2em;
+                font-weight: bold;
+                margin: 20px 0;
+                display: flex;
+                justify-content: space-between;
+                top: -8px;
+                
+            }
+            .weather-info .details{
+                color: darkgrey;
+                font-size: 0.9em;
+                margin: 5px 0;
+                
+            }
+            .weather-info .icon{
+                font-size: 0.5em;
+                color: orange;
+                top: -38px;
+                display: flex;
+                justify-content: space-between;
+                float: right;
+                position: relative;
+                margin: 10px;
+            }
+           
+            footer{
+                margin-top: 20px;
+                font-size: 0.8em;
+                color: darkgrey;
+            }
+            .footer a{
+                color: darkorchid;
+                text-decoration: none;
+            }
+            main{
+                padding: 30px;
+            }
+            h2{
+                float: right;
+                
+            }
+            .current-temperature-unit{
+                font-size: 28px;
+                position: relative;
+                top: -38px;
+            }
+            .current-temperature-value{
+                position: relative;
+                top: -38px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Enter a city..">
+                <button>Search</button>
+            </div>
+           
+            <div class="weather-info">
+                <h1>Paris</h1>
+               
+                <h2> 
+                    <div class="temperature"> 
+                        
+                        <span class="icon">☀</span> <span class="current-temperature-value" id="current-temperature">24</span><span class="current-temperature-unit">°c</span></div>
+                       
+                </div>
+            </h2>
+                <div class="details">Tuesday 07:45, moderate rain</div>
+               
+                <div class="details">Humidity: <span style="color: indianred;">87% </span>, Wind:<span style="color: indianred;">7.2km/h </span></div>
+            
+              
+              <br>
+            <div class="footer">
+                This project was coded by <a href="#">Rennish Mboya</a> and is<a href="#"> on Github</a> and <a href="#">hosted on Netlify</a>
+            </div>
+            </br>
+        </div>
+    </body>
+</html>
