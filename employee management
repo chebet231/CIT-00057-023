@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Employee Management System
+        </title>
+        <link rel="stylesheet"
+        href="styles.css">
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        .login-container, .registration-container{
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input, select{
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+        }
+        
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .dashboard-container{
+            display: flex;
+            margin: 20px;
+        }
+        .sidebar h3{
+            margin-bottom: 20px;
+        }
+        .sidebar ul{
+            list-style-type: none;
+        }
+        .sidebar ul li{
+            margin: 10px 0;
+        }
+        .sidebar ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover{
+            text-decoration: underline;
+        }
+        .main-content{
+            flex: 1;
+            padding: 20px;
+        }
+        footer{
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+        .hidden{
+            display: none;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td{
+            padding: 10px;
+            border: 1px solid white;
+            text-align: left;
+        }
+        th{
+            background-color: white;
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgb(86, 139, 86);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: rgb(96, 179, 96);
+        }
+    </style>
+
+
+
+
+    <body>
+        <div class="login-container">
+            <h2>
+                Welcome to employee Management System
+            </h2>
+            <form action="#" method="post">
+                <label for="username"> Username </label>
+                <input type="text" id="username" name="username" required>
+                <label for="password"> password </label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit"> Login </button>
+                <p>
+                    
+                    <a href="#">Forgot password? </a>|<a href="#"> Sign up </a>
+                </p>
+            </form>
+        </div>
+        <div class="registration-container">
+            <h2> 
+                Create a New Account
+            </h2>
+            <form action="#" method="post">
+                <label for="full-name" > Full Name: </label>
+                <input type="text" id="full-name" name="full-name" required>
+                <label for="email" > Email </label>
+                <input type="email" id="email" name="email" required>
+                <label for="username" > Username </label>
+                <input type="username" id="username" name="username" required>
+                <label for="password" > Password </label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password" > Confirm-password </label>
+                <input type="confirm-password" id="confirm-password" name="confirm-password" required>
+                <label for="phone" > Phone number </label>
+                <input type="text" id="phone" name="phone" >
+                <label for="address" > Address </label>
+                <input type="text" id="address" name="address" >
+                <label for="role" > Role </label>
+                <select  id="role" name="role" >
+
+                <option value="admin"> Admin </option>
+                <option value="Employee" >Employee </option>
+                <option value="manager"> Manager </option>
+            </select>
+
+            <label for="department"> Department: </label>
+            <select id="department" name="department">
+                <option value="hr"> HR </option>
+                <option  value="finance"> Finance </option>
+                <option value="it"> IT </option>
+            </select>
+            <button type="submit">Register </button>
+            </form>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="sidebar">
+                <h3>
+                    Welcome,[Employee Name]
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#home" onclick="showsection('home')"> Home </a>
+                    </li>
+                    <li>
+                        <a href="#finance" onclick="showsection('finance')" > Finance </a>
+                    </li>
+                    <li>
+                        <a href="#department" onclick="showsection('department')"> Department </a>
+                    </li>
+                    <li>
+                        <a href="#procurement" onclick="showsection('procurement')"> Procurement </a>
+                    </li>
+                    <li>
+                        <a href="#leave" onclick="showsection('leave')"> Leave </a>
+                    </li>
+
+                    <li>
+                        <a href="#"> Logout </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <section id="home">
+                <h1>
+                    Welcome to the dashboard-container
+                </h1>
+                <p>
+                    Manage your Employee details and tasks from here.
+                </p>
+                </section>
+                <section id="finance" >
+                    <h2>Finance overview</h2>
+                    
+                    <label for="Budget-category-select">  Budget Category: </label>
+                    <select id="Budget-category-select" >
+                        <option value=""> --Select Budget Category--</option>
+                        <option value="Salaries"> Salaries</option>
+                        <option value="Office Supplies"> Office Sapplies</option>
+                        <option value="Sales and Marketing"> Sales and Marketing </option>
+                        <option value="IT and Software"> IT and Software</option>
+                        <option value="Utilities"> Utilities </option>
+
+                    </select>
+
+                    <label for="Expense-type-select">  Expense Type: </label>
+                    <select id="Expense-type-select" >
+                        <option value=""> --Select Expense Type--</option>
+                        <option value="Fixed"> Fixed</option>
+                        <option value="Variable"> Variable</option>
+                        <option value="Direct"> Direct </option>
+                        <option value="Indirect"> Indirect</option>
+                        <option value="Capital"> Capital</option>
+                        <option value="Operational"> Operational</option>
+
+                    </select>
+
+                    <label for="payment-status-select"> Payment Status: </label>
+                    <select id="payment-status-select" >
+                        <option value=""> --Select payment status--</option>
+                        <option value="Pending"> Pending</option>
+                        <option value="Completed"> Completed</option>
+                        <option value="Refunded"> Refunded </option>
+                        <option value="Overdued"> Overdured </option>
+                        <option value="Cancelled"> Cancelled </option>
+                    </select>
+
+                    <label for="transaction-type-select"> Transaction type: </label>
+                    <select id="transaction-type-select" >
+                        <option value=""> --Select transaction type--</option>
+                        <option value="Income"> Income</option>
+                        <option value="Expense"> Expense</option>
+                        <option value="Transfer"> Transfer </option>
+                        <option value="Refund"> Refund </option>
+                        <option value="Investment"> Investment </option>
+                    </select>
+
+                    <label for="account-type-select"> Account type: </label>
+                    <select id="Account-type-select" >
+                        <option value=""> --Select account type--</option>
+                        <option value="Bank Account"> Bank Account</option>
+                        <option value="Credit Card"> Credit Card</option>
+                        <option value="Cash"> Cash </option>
+                        <option value="Savings"> Savings </option>
+                        <option value="Investment account"> Investment account </option>
+                    </select>
+
+
+                    <br>
+                    <button> Add Transaction </button>
+                </br>
+                </section>
+                <section id="departments" >
+                    <h2>Departments</h2>
+                    <label for="Department-select"> Select Department: </label>
+                    <select id="Deparment-select" >
+                        <option value=""> --Select Department--</option>
+                        <option value="Human Resources"> Human Resources</option>
+                        <option value="Finance"> Finance</option>
+                        <option value="Sales and Marketing"> Sales and Marketing </option>
+                        <option value="Information Technology"> Information Technology</option>
+                        <option value="Procurement"> Procurement </option>
+
+                    </select>
+
+                    <br>
+                    <button>Add department</button>
+                    <button>Assign Employees</button>
+                </br>
+                </section>
+                    
+                <section id="procurement" >
+                    <h2>Procurement Management</h2>
+                    <label for="Vendor-select"> Select Vendor: </label>
+                    <select id="Vendor-select" onchange="updateVendor()">
+                        <option value=""> --Select a Vendor--</option>
+                        <option value="A"> Vendor A</option>
+                        <option value="B"> Vendor B</option>
+                        <option value="C"> Vendor C </option>
+                    </select>
+
+                    <label for="item-category-select"> Item/Catagory: </label>
+                    <select id="item-category-select" >
+                        <option value=""> --Select Category--</option>
+                        <option value="Office Supplies"> Office Supplies</option>
+                        <option value="Electronics"> Electronics</option>
+                        <option value="Furniture"> Furniture </option>
+                        <option value="Cleaning Supplies"> Cleaning Supplies </option>
+                        <option value="Foods and Beverages"> Foods and Beverages </option>
+                    </select>
+
+                    <label for="order-status-select"> Order Status: </label>
+                    <select id="order-status-select" >
+                        <option value=""> --Select order status--</option>
+                        <option value="Requested"> Requested</option>
+                        <option value="Approved"> Approved</option>
+                        <option value="In Progress"> In Progress </option>
+                        <option value="Completed"> Completed </option>
+                        <option value="Cancelled"> Cancelled </option>
+                    </select>
+
+                    <label for="payment-method-select"> Payment Method: </label>
+                    <select id="payment-method-select" >
+                        <option value=""> --Select payment method--</option>
+                        <option value="credit"> credit</option>
+                        <option value="Bank"> Bank</option>
+                        <option value="Bank Transfer"> Bank Transfer </option>
+                        <option value="Cheque"> Cheque </option>
+                        <option value="Cash"> Cash </option>
+                    </select>
+
+                    <label for="delivery-method-select"> Delivery Method: </label>
+                    <select id="delivery-method-select" >
+                        <option value=""> --Select delivery method--</option>
+                        <option value="courier"> courier</option>
+                        <option value="pickup"> pickup</option>
+                        <option value="Postal Services"> Postal Services </option>
+                        <option value="Freight"> Freight </option>
+                        <option value="Digital Delivery"> Digital Delivery </option>
+                    </select>
+
+                     <br>
+
+                    <button>Request new procurement</button>
+                    <button>Approve Request</button>
+                </section>
+            </br>
+            
+                <section id="Leave" >
+                    <h2>Leave Management</h2>
+                    <label for="leave-employee-select"> Select Employee: </label>
+                    <select id="leave-employee-select" onchange="updateLeaveDetails()">
+                        <option value=""> --Select an Employee--</option>
+                        <option value="John kirwa">John kirwa</option>
+                        <option value="MIchael Smith"> Michael Smith</option>
+                        <option value="Vivian"> Vivian </option>
+                    </select>
+
+                <label for="leave-type-select"> Leave Type: </label>
+                <select id="leave-type-select" >
+                    <option value=""> --Select leave type--</option>
+                    <option value="Annual">Annual</option>
+                    <option value="Sick"> Sick</option>
+                    <option value="Maternity"> Maternity</option>
+                    <option value="Paternity"> Paternity</option>
+                    
+                </select>
+
+                <label for="leave-status-select"> Status: </label>
+                <select id="leave-status-select" >
+                    <option value=""> --Select status--</option>
+                    <option value="Pending"> Pending</option>
+                    <option value="Approved"> Approved</option>
+                    <option value="Rejected"> Rejected</option>
+                                        
+                </select>
+                 <br>
+                <button>Request Leave</button>
+                    <button>Approve Leave</button>
+            </br>
+                <br>
+            <footer>
+                <p>
+                    <a href="#"> Privacy Policy </a>| <a href="#"> Terms and conditions </a>|<a href="#"> Contact Support </a>
+                </p>
+            </footer>
+        </br>
+            <script src="scrips.js"></script>
+        </body>
+</html>
+
+
+
+
+
+
+
+
+                
+
+                
+
+
+                
