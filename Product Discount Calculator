@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Discount Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: whitesmoke;
+        }
+
+        .container {
+            width: 400px;
+            border: 2px solid darkblue;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid grey;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="number"] {
+            display: inline-block;
+            width: calc(90% - 8px);
+        }
+
+        .form-group span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: grey;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button-group button:nth-child(2) {
+            background-color: grey;
+            margin-left: 10px;
+        }
+
+        .button-group button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Discount Calculator</h1>
+        <form id="discountForm">
+            <div class="form-group">
+                <label for="description">Product Description:</label>
+                <input type="text" id="description" name="description" placeholder="Enter product description">
+            </div>
+            <div class="form-group">
+                <label for="listPrice">List Price:</label>
+                <input type="number" id="listPrice" name="listPrice" placeholder="Enter list price">
+            </div>
+            <div class="form-group">
+                <label for="discountPercentage">Discount Percentage:</label>
+                <input type="number" id="discountPercentage" name="discountPercentage" placeholder="Enter discount percentage">
+                <span>%</span>
+            </div>
+            <div class="form-group">
+                <label for="discountedAmount">Discounted Amount:</label>
+                <input type="text" id="discountedAmount" name="discountedAmount" readonly>
+            </div>
+            <div class="form-group">
+                <label for="discountedPrice">Discounted Price:</label>
+                <input type="text" id="discountedPrice" name="discountedPrice" readonly>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="calculateDiscount()">Calculate</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function calculateDiscount() {
+            const listPrice = parseFloat(document.getElementById('listPrice').value);
+            const discountPercentage = parseFloat(document.getElementById('discountPercentage').value);
+
+            if (isNaN(listPrice) || isNaN(discountPercentage)) {
+                alert('Please enter valid values for List Price and Discount Percentage.');
+                return;
+            }
+
+            const discountedAmount = (listPrice * discountPercentage) / 100;
+            const discountedPrice = listPrice - discountedAmount;
+
+            document.getElementById('discountedAmount').value = discountedAmount.toFixed(2);
+            document.getElementById('discountedPrice').value = discountedPrice.toFixed(2);
+        }
+    </script>
+</body>
+</html>
