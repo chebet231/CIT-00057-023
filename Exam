@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 40%;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: bold;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exam</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>CIM 322</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mary</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
