@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        th, td {
+            border: 1px solid gainsboro;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lavender;
+        }
+
+        p {
+            font-size: 16px;
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exam App</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>CIM 322</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mary</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td>60</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Thanks for using the <strong>Exam App</strong> </p>
+    </div>
+</body>
+</html>
